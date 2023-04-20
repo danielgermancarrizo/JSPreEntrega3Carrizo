@@ -1,0 +1,64 @@
+h1{
+    @extend %title-primary;
+    text-align: center;
+}
+
+h2{
+    @extend %title-secondary;
+    text-align: center;
+    margin-top: 20px;
+}
+
+h3{
+    @extend %title-tertiary;
+    padding: 20px 50px 20px 50px;
+    text-align: justify;
+    
+}
+
+p{
+    @extend %paragraph;
+}
+
+
+@media only screen and (max-width:1024px) {           
+    h1{
+         font-size: $title-primary-mob-size;
+         text-align: center;
+         color: $text-color;
+         margin-top: 10px;
+         margin-bottom: 10px;
+    }
+
+    h3{
+        font-size: $title-tertiary-mob-size;
+        padding: 20px;
+    }
+
+    p{
+        font-size: $paragraph-mob-size;
+        margin: 10px;
+    }   
+}
+
+ul{
+    padding: 0px 20px 0px 50px;
+    text-align: justify;
+    
+    li{
+        font-size: $paragraph;
+    };
+
+    @media only screen and (max-width:1024px){
+        padding: 0px;
+        text-decoration: none;
+        padding-left: 25px;
+        li{
+            font-size: $paragraph-mob-size;
+        }
+    }
+}
+
+.text-center p{
+    text-align: center;
+}

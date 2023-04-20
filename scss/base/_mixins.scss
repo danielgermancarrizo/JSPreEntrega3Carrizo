@@ -1,0 +1,24 @@
+// Al repetirse Curso en Index, y sólo cambia background-image, 
+// me parece una buena aplicación de Mixin
+
+@mixin course($name, $url-image) { 
+        grid-area: $name;
+        background-image: url($url-image);
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 10px;
+        @extend %btn-course-position;
+
+        @media only screen and (max-width:1024px) {
+            height: 20vh;
+            background-size:cover;
+            align-items: center;
+            flex-grow: 1;
+            border: 2px solid yellow;
+        
+            @if $name == 'course4' {
+                margin-bottom: 10px;
+            }
+        }
+    
+}

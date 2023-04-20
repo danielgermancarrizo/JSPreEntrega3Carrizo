@@ -1,0 +1,103 @@
+
+#articles{
+    background-color: $background_color;
+    margin-top: 60px;    
+    
+    a{
+        color: map-get($links,color);
+        text-decoration: map-get($links,decoration);   
+    }
+
+    h1{
+        @extend %title-primary;
+        
+    }
+
+    @media only screen and (max-width:1024px) {           
+        h1{
+             font-size: $title-primary-mob-size;
+             text-align: center;
+             color: $text-color;
+             margin-top: 10px;
+             margin-bottom: 10px;
+        }
+    }
+
+    .container{
+        margin-top: 40px;
+
+        
+        .card-img-top {
+            max-height: 250px;
+            overflow: hidden;
+        }
+
+        .card-title a:link {
+            font-size: 30px;
+            background-color: transparent;
+            color: #000000;
+            text-decoration: none;
+        }
+
+        .card-body{    
+            background-color: white;
+            padding: 0px;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid $text-color;
+            
+            h2{
+                @extend %title-secondary;
+                line-height: 40px;
+                text-align: center
+
+            }
+            
+            p{
+                @extend %paragraph;
+                padding: 10px;
+                margin: 20px 0px 20px 0px;
+                text-align: justify;
+            }
+            
+            @media only screen and (max-width:1024px) {          
+            
+                h2{
+                    font-size: $title-secondary-mob-size;
+                    text-align: center;
+                    line-height: 25px;
+                }
+            
+                p{
+                    font-size: $paragraph-mob-size;
+                    margin: 10px;
+                }    
+            }
+        }
+
+        .btn-index-course{
+            @extend %btn-course;
+            
+
+            @media only screen and (max-width:1024px) {
+                font-size: 10px;               
+            }        
+        }
+
+        .btn-index-course:hover{
+            @extend %btn-course-hover;
+            a{
+                color: antiquewhite !important;
+                
+            }
+
+            @media only screen and (max-width:1024px) {
+                font-size: 10px;
+                
+            }        
+        }
+    }
+}
+
+
+

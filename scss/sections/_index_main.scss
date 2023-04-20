@@ -1,0 +1,139 @@
+
+main{
+    width: 100%;
+    height: 100%;
+    @media only screen and (max-width:1024px) {
+        height: 100%;
+    }    
+}
+
+a{
+    color: map-get($links,color);
+    text-decoration: map-get($links,decoration);   
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#carousel{
+    padding-top: 75px;
+
+    .carousel-caption-text
+    {
+        h4{
+            color:black;
+            font-weight: bold;
+            background-color: #fade4f;
+            font-size: 3rem;
+
+            width: 100%;
+        }
+
+        p{
+            color:black;
+            font-size: 2rem;
+            background-color: #212529;
+            color: #fade4f;
+            width: 100%;            
+            margin: 0px;
+            padding: 15px;
+
+        }
+
+        @media only screen and (max-width:1024px) {
+
+            h4{
+                font-size: 1.5rem;
+                color: $text-color;
+                background-color: $primary-color;
+                padding-bottom: 3px;
+                padding-top: 3px;
+                border-radius: 10px;
+            }
+            
+            p{
+                display: none;
+            }
+        }
+    } 
+}
+
+#index-courses{
+    display: grid;
+    grid-template-columns: 0.8fr 1fr 1fr;
+    grid-template-rows: 55vh 55vh;
+    grid-template-areas: 
+    'title course1 course2'
+    'title course3 course4';
+    row-gap: 20px;
+    column-gap: 20px;
+    width: 100%;
+    margin: 30px 0px 30px 0px;
+    padding: 0px 25px 0px 25px;
+    
+    @media only screen and (max-width:1024px) {
+            display: flex;
+            flex-direction: column;
+            margin: 0px;
+            padding: 0px;
+            gap: 5px; 
+    }
+
+    .index-title{
+        grid-area: title;
+        text-align: left;
+        margin-left: 10px;
+
+        h1{
+            @extend %title-primary;
+        }
+
+        h2{
+            @extend %title-secondary;
+            margin-top: 50px;
+        }
+
+        @media only screen and (max-width:1024px) {           
+           h1{
+                font-size: $title-primary-mob-size;
+                text-align: center;
+                color: $text-color;
+                margin-top: 10px;
+                margin-bottom: 10px;
+           } 
+            
+            h2{
+                display: none;
+            }                            
+        }
+    }
+
+    .course1{
+        @include course("course1", "../img/1.jpg");              
+    }
+
+    .course2{
+        @include course("course2", "../img/2.jpg");    
+    }
+
+    .course3{
+        @include course("course3", "../img/3.jpg");    
+    }
+    
+    .course4{
+        @include course("course4", "../img/4.jpg");
+    }
+
+    .btn-index-course{
+        @extend %btn-course;
+    }
+    
+    .btn-index-course:hover{
+        @extend %btn-course-hover;
+    }
+
+}
+

@@ -1,0 +1,29 @@
+// base
+@import './base/maps';
+@import './base/extends';
+@import './base/variables';
+@import './base/mixins';
+
+// components
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: $background_color;
+}
+
+a{
+    text-decoration: none
+}
+
+@import './sections/index_main';
+@import './sections/about_presentation';
+@import './sections/articles';
+@import './sections/article';
+@import './sections/courses';
+@import './sections/contact';
+@import './components/footer';
+

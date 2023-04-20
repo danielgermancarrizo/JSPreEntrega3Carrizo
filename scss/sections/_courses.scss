@@ -1,0 +1,155 @@
+#course{
+   
+    margin-top: 40px;
+
+    h1{
+        @extend %title-primary;
+        text-align: center;
+    }
+
+    h2{
+        @extend %title-secondary;
+    }
+
+    h3{
+        @extend %title-tertiary;
+        border: 1px solid black;
+        text-align: center;
+        background-color: $primary-color;
+        padding: 0px;
+    }
+
+    p{
+        @extend %paragraph;
+        font-size: 1.5rem;
+        text-align: left;
+    }
+
+    @media only screen and (max-width:1024px) {           
+        h1{
+             font-size: $title-primary-mob-size;
+             text-align: center;
+             color: $text-color;
+             margin-top: 10px;
+             margin-bottom: 10px;
+        }
+
+        h2{
+            font-size: $title-secondary-mob-size;
+            margin-top: 10px;
+        }
+
+        h3{
+            font-size: $title-tertiary-mob-size;
+            margin-top: 0px;
+            border: 1px solid black;
+            text-align: center;
+            background-color: $primary-color;
+            
+        }
+
+        p{
+            font-size: $paragraph-mob-size;
+            margin: 10px;
+            text-align: justify ;
+        }
+    }
+    
+    .container{
+        img{
+            width: 100%;
+            padding: 0px;
+            border-radius: 10px;
+        }
+        
+        #course-img-profe{
+            width: 50%;
+        }
+    }    
+    
+    
+    #course-list-cost{
+        list-style: none;
+        font-family: $text;
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+
+
+        li:nth-child(1) {
+            font-weight: bolder;
+            font-size: 1.8rem;
+            padding: 5px;
+            background-color: $background_color;
+            text-align: center;
+        }
+
+        li:nth-child(2) {
+            font-weight: bolder;
+            font-size: 1.5rem;
+            padding: 5px;
+            text-align: left;
+            margin-left: 20px;
+        }
+
+        li:nth-child(3){
+            width: 40%;
+            align-self: center;
+        }
+
+        li:nth-child(4) {
+            font-size: 1.5rem;
+            padding: 15px;
+            font-size: 1rem;
+        }    
+    }
+
+    @media only screen and (max-width:1024px) {   
+        #course-list-cost{
+            list-style: none;
+            font-family: $text;
+            display: flex;
+            flex-direction: column;
+
+            li:nth-child(1) {
+                font-weight: bolder;
+                font-size: 1.3rem;
+                background-color: $background_color;
+                width: 100%;
+            }
+    
+            li:nth-child(2) {
+                font-weight: bolder;
+                font-size: 1.2rem;
+                padding: 5px;
+                text-align: center;
+            }
+    
+            li:nth-child(3){
+                width: 40%;
+                align-self: center;
+            }
+    
+            li:nth-child(4) {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    #course-list-req{
+        text-align: left;
+        font-family: $text;
+        margin-top: 20px;
+    }    
+}
+
+.my-bg-course{
+    h1{
+        text-align: left;
+        padding: 10px;
+    }
+
+    h4{
+        text-align: left;
+    }
+}

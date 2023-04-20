@@ -1,0 +1,96 @@
+#contact{
+    margin-top: 100px;
+
+    @media only screen and (max-width:1024px) {
+        margin-top: 80px;
+    }
+
+    .my-contact{
+        margin-top: 30px;
+        border: 1px solid $text-color;
+        border-radius: 25px;
+        padding: 20px;
+        background-color: $primary-color;
+        margin-bottom: 60px;
+
+        @media only screen and (max-width:1024px) {
+            margin-bottom: 5px;
+            margin-top: 5px
+        }
+            
+        .my-form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            row-gap: 15px;
+            height: 100%;
+            width: 100%;
+    
+            .btn-send{
+                @extend %btn-course;
+                background-color: $text_color;
+                color: $primary-color;
+            }
+
+            .btn-send:hover{
+                @extend %btn-course-hover;
+            }
+
+            label{
+                @extend %title-tertiary;
+            }
+
+            @media only screen and (max-width:1024px) {
+                row-gap: 5px;
+                
+                label {
+                    font-size:$paragraph-mob-size;
+                    font-weight: normal;
+                } 
+            }
+        }
+
+        #form-register #form-login{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            row-gap: 15px;
+            height: 100%;
+            width: 100%;
+    
+            .btn-send{
+                @extend %btn-course;
+                background-color: $text_color;
+                color: $primary-color;
+            }
+
+            .btn-send:hover{
+                @extend %btn-course-hover;
+            }
+
+            label{
+                @extend %title-tertiary;
+            }
+
+            @media only screen and (max-width:1024px) {
+                row-gap: 5px;
+                
+                label {
+                    font-size:$paragraph-mob-size;
+                    font-weight: normal;
+                } 
+            }
+        }
+    
+        iframe{
+            border-radius: 25px;
+
+            @media only screen and (max-width:1024px) {
+                height: 50%;
+            }
+        }     
+    }
+    
+   
+    
+}
